@@ -1,2 +1,44 @@
 # ESER_LANDING-PAGE-FOR-BUSINESS-with-2D-GAME
 Exam for Multi Media Development Lab - Educational Purposes only
+
+
+# SOURCE — Gaming Landing Page
+
+A dark, early-2000s Steam-inspired landing page with an embedded 2D Gmod-style platformer.
+
+## File Structure
+
+```
+source-landing/
+├── index.html   — Markup & structure
+├── style.css    — All styling (Steam dark × Awwwards polish)
+├── game.js      — 2D Gmod platformer (canvas)
+├── main.js      — Page interactions, scroll animations, counters
+└── README.md
+```
+
+## Game Controls
+
+| Key | Action |
+|-----|--------|
+| `W` / `↑` or `Space` | Jump (double jump supported) |
+| `A` / `←` | Move left |
+| `D` / `→` | Move right |
+| `Z` | Throw prop (barrel / crate) — hits NPCs & ragdolls them |
+| `R` | Reset game |
+
+## Deploy to GitHub Pages
+
+1. Create a new GitHub repository (e.g. `source-games`)
+2. Push all four files to the `main` branch root
+3. Go to **Settings → Pages**
+4. Source: **Deploy from branch** → `main` → `/ (root)`
+5. Click **Save** — your site will be live at `https://<username>.github.io/<repo>/`
+
+## Tech Stack
+
+- **HTML5** — semantic markup
+- **Tailwind CSS** (CDN) + custom `style.css`
+- **Vanilla JavaScript** — no frameworks
+- **Canvas API** — 2D game engine
+- **Google Fonts** — Share Tech Mono, Rajdhani, Barlow Condensed
