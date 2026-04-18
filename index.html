@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SOURCE — Games</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@400;500;600;700&family=Barlow+Condensed:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <span class="logo-bracket">[</span>SOURCE<span class="logo-bracket">]</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about" class="nav-link">ABOUT</a></li>
+        <li><a href="#game-section" class="nav-link">PLAY</a></li>
+        <li><a href="#features" class="nav-link">FEATURES</a></li>
+        <li><a href="#community" class="nav-link">COMMUNITY</a></li>
+      </ul>
+      <a href="#game-section" class="nav-cta">PLAY NOW</a>
+    </div>
+  </nav>
+
+  <header id="hero">
+
+    <div class="hero-grid" aria-hidden="true">
+      <div class="grid-line v1"></div>
+      <div class="grid-line v2"></div>
+      <div class="grid-line v3"></div>
+      <div class="grid-line h1"></div>
+      <div class="grid-line h2"></div>
+    </div>
+
+    <div class="hero-orb orb-1" aria-hidden="true"></div>
+    <div class="hero-orb orb-2" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <span class="eyebrow-line"></span>
+        <span class="eyebrow-text">EARLY ACCESS — SEASON 01</span>
+        <span class="eyebrow-line"></span>
+      </div>
+
+      <h1 class="hero-title">
+        <span class="title-line" data-text="SOURCE">SOURCE</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        A sandbox platformer built by the community,<br />
+        for the community. Mod it. Break it. Own it.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#game-section" class="btn-primary">
+          <span class="btn-icon">▶</span>
+          PLAY FREE
+        </a>
+        <a href="#about" class="btn-secondary">
+          LEARN MORE
+        </a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num" data-target="24800">0</span>
+          <span class="stat-label">PLAYERS ONLINE</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num" data-target="1200">0</span>
+          <span class="stat-label">WORKSHOP MODS</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num" data-target="98">0</span>
+          <span class="stat-label">% POSITIVE REVIEWS</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-hint">
+      <span class="scroll-line"></span>
+      <span class="scroll-text">SCROLL</span>
+    </div>
+  </header>
+
+  <section id="about" class="about-strip">
+    <div class="strip-inner">
+      <div class="about-tag">// ABOUT THE GAME</div>
+      <div class="about-cols">
+        <div class="about-heading-col">
+          <h2 class="about-heading">
+            BUILT ON<br />
+            <em>CHAOS.</em><br />
+            REFINED<br />
+            BY PLAY.
+          </h2>
+        </div>
+        <div class="about-body-col">
+          <p>
+            Source is a 2D sandbox platformer that draws from the anarchic spirit of Garry's Mod—
+            ragdolls, props, contraptions, and absolute mayhem—distilled into a tight side-scrolling world.
+          </p>
+          <p>
+            Every level is a physics playground. Every character is fully moddable. The workshop is your canvas.
+          </p>
+          <ul class="feature-bullets">
+            <li><span class="bullet-icon">◈</span> Physics-driven ragdoll characters</li>
+            <li><span class="bullet-icon">◈</span> Fully open workshop & modding SDK</li>
+            <li><span class="bullet-icon">◈</span> Procedural destruction system</li>
+            <li><span class="bullet-icon">◈</span> Co-op & versus multiplayer</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="game-section" class="game-section">
+    <div class="game-header">
+      <div class="section-tag">// INTERACTIVE DEMO</div>
+      <h2 class="section-title">TRY IT NOW</h2>
+      <p class="section-sub">Arrow keys / WASD to move &nbsp;·&nbsp; Space to jump &nbsp;·&nbsp; Z to throw prop</p>
+    </div>
+
+    <div class="game-wrapper">
+      <div class="game-chrome">
+        <div class="chrome-bar">
+          <div class="chrome-dots">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+          </div>
+          <span class="chrome-title">source_demo_v0.1.exe</span>
+          <span class="chrome-fps" id="fps-counter">60 FPS</span>
+        </div>
+        <canvas id="gameCanvas"></canvas>
+      </div>
+      <div class="game-controls-hint">
+        <div class="key-hint"><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> / <kbd>↑↓←→</kbd> Move</div>
+        <div class="key-hint"><kbd>SPACE</kbd> Jump / Double Jump</div>
+        <div class="key-hint"><kbd>Z</kbd> Throw Prop</div>
+        <div class="key-hint"><kbd>R</kbd> Reset</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="features" class="features-section">
+    <div class="features-inner">
+      <div class="section-tag">// KEY FEATURES</div>
+      <h2 class="section-title">WHAT MAKES<br /><em>SOURCE</em> DIFFERENT</h2>
+
+      <div class="features-grid">
+        <div class="feature-card" data-index="01">
+          <div class="card-num">01</div>
+          <div class="card-icon">⚙</div>
+          <h3 class="card-title">PHYSICS ENGINE</h3>
+          <p class="card-body">Every object obeys real physics. Stack props, build contraptions, or just watch NPCs ragdoll down a staircase.</p>
+        </div>
+        <div class="feature-card" data-index="02">
+          <div class="card-num">02</div>
+          <div class="card-icon">🔧</div>
+          <h3 class="card-title">MODDING SDK</h3>
+          <p class="card-body">First-class modding tools ship day one. Characters, maps, weapons, gamemodes — everything is exposed and documented.</p>
+        </div>
+        <div class="feature-card" data-index="03">
+          <div class="card-num">03</div>
+          <div class="card-icon">🌐</div>
+          <h3 class="card-title">WORKSHOP</h3>
+          <p class="card-body">Thousands of community mods, maps, and gamemodes. Subscribe and play in one click.</p>
+        </div>
+        <div class="feature-card" data-index="04">
+          <div class="card-num">04</div>
+          <div class="card-icon">👥</div>
+          <h3 class="card-title">MULTIPLAYER</h3>
+          <p class="card-body">Join friends in co-op sandbox or compete in versus modes. Server browser included. Dedicated server tools free forever.</p>
+        </div>
+        <div class="feature-card feature-card--wide" data-index="05">
+          <div class="card-num">05</div>
+          <div class="card-icon">🎮</div>
+          <h3 class="card-title">SANDBOX FREEDOM</h3>
+          <p class="card-body">No objectives. No fail states. Just a world full of props, NPCs, weapons, and tools. Do whatever you want — the game never judges you.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="community" class="community-section">
+    <div class="community-inner">
+      <div class="section-tag">// JOIN THE COMMUNITY</div>
+      <h2 class="community-heading">
+        THE SANDBOX<br />
+        AWAITS.
+      </h2>
+      <p class="community-sub">Free to play. No microtransactions. No battle pass. Just a game.</p>
+      <div class="community-actions">
+        <a href="#game-section" class="btn-primary btn-large">PLAY FREE IN BROWSER</a>
+        <a href="https://github.com/emil-yan/ESER_LANDING-PAGE-FOR-BUSINESS-with-2D-GAME" target="_blank" class="btn-ghost">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          VIEW ON GITHUB
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <span class="logo-bracket">[</span>SOURCE<span class="logo-bracket">]</span>
+      </div>
+      <div class="footer-links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Press Kit</a>
+        <a href="https://github.com/emil-yan/ESER_LANDING-PAGE-FOR-BUSINESS-with-2D-GAME" target="_blank">GitHub</a>
+      </div>
+      <div class="footer-copy">© 2025 SOURCE GAMES. ALL RIGHTS RESERVED.</div>
+    </div>
+  </footer>
+
+  <script src="game.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
