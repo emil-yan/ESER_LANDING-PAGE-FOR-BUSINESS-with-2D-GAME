@@ -4,7 +4,7 @@ Exam for Multi Media Development Lab - Educational Purposes only
 
 # SOURCE — Gaming Landing Page
 
-A dark, early-2000s Steam-inspired landing page with an embedded 2D Gmod-style platformer.
+A Gaming Business landing page with an embedded 2D Gmod-style platformer.
 
 ## File Structure
 
