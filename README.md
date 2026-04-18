@@ -11,8 +11,8 @@ A Gaming Business landing page with an embedded 2D Gmod-style platformer.
 ```
 source-landing/
 ├── index.html   — Markup & structure
-├── style.css    — All styling (Steam dark × Awwwards polish)
-├── game.js      — 2D Gmod platformer (canvas)
+├── style.css    — All styling
+├── game.js      — 2D Gmod platformer
 ├── main.js      — Page interactions, scroll animations, counters
 └── README.md
 ```
@@ -26,14 +26,6 @@ source-landing/
 | `D` / `→` | Move right |
 | `Z` | Throw prop (barrel / crate) — hits NPCs & ragdolls them |
 | `R` | Reset game |
-
-## Deploy to GitHub Pages
-
-1. Create a new GitHub repository (e.g. `source-games`)
-2. Push all four files to the `main` branch root
-3. Go to **Settings → Pages**
-4. Source: **Deploy from branch** → `main` → `/ (root)`
-5. Click **Save** — your site will be live at `https://<username>.github.io/<repo>/`
 
 ## Tech Stack
 
